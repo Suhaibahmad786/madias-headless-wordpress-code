@@ -49,7 +49,7 @@ document.addEventListener("submit", function(e){
 
 
 
-fetch("http://localhost/madias/wp-json/wp/v2/posts?_embed")
+fetch("/madias/wp-json/wp/v2/posts?_embed")
 .then(response => response.json())
 .then(posts => {
 
@@ -83,7 +83,7 @@ fetch("http://localhost/madias/wp-json/wp/v2/posts?_embed")
 
 
 
-fetch("http://localhost/madias/wp-json/wp/v2/testimonials?_embed")
+fetch("/madias/wp-json/wp/v2/testimonials?_embed")
 .then(res=> res.json())
 .then(testidata =>{
   let output ='';
@@ -126,7 +126,7 @@ output += `
 
 
 
-    fetch("http://localhost/madias/wp-json/wp/v2/service?_embed")
+    fetch("/madias/wp-json/wp/v2/service?_embed")
 .then(seres => seres.json())
 .then(serdata => {
   let seroutput='';

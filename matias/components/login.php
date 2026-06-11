@@ -1,6 +1,6 @@
 <?php
   $title = $title ?? "Madias";
-  $base  = "/madias/matias/";
+  $base  = "/madias/";
   // include('matias/config/config.php');
 ?>
 <!DOCTYPE html>
@@ -48,7 +48,7 @@
 
     const formData = new FormData(this);
 
-    fetch("http://localhost/madias/wp-json/custom/v1/login", {
+    fetch("/madias/wp-json/custom/v1/login", {
         method: "POST",
         body: formData,
         credentials: "include"

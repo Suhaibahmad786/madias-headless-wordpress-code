@@ -12,6 +12,8 @@
   <title><?= htmlspecialchars($title) ?></title>
 
   <link rel="stylesheet" href="style/home.css">
+  <link rel="stylesheet" href="style/registor.css">
+  <link rel="stylesheet" href="style/header.css">
 </head>
 <body>
     <?php  include __DIR__ . "/components/header.php";?>
@@ -211,7 +213,7 @@ tabs.forEach((tab, index) => {
 
 
 // ACF Projects REST API
-fetch('http://localhost/madias/wp-json/wp/v2/projects?_embed')
+fetch('/madias/wp-json/wp/v2/projects?_embed')
 .then(res => res.json())
 .then(data => {
 
