@@ -7,10 +7,13 @@
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /madias/
+# Serve frontend `matias/index.php` at site root
+# If the request path is empty (visiting /madias/), rewrite to the frontend index
+RewriteRule ^$ /madias/matias/index.php [L]
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /madias/index.php [L]
+RewriteRule ./matias/index.php [L]
 </IfModule>
 
 # END WordPress

@@ -1,0 +1,23 @@
+# Headless WordPress - Frontend and API Router
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /madias/
+
+# Preserve real files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route WordPress API and admin to index.php
+RewriteRule ^wp-json/ - [L]
+RewriteRule ^wp-admin - - [L]
+RewriteRule ^wp-content - - [L]
+RewriteRule ^wp-includes - - [L]
+RewriteRule ^index\.php$ - [L]
+
+# Everything else goes to index.php (which routes to frontend)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>

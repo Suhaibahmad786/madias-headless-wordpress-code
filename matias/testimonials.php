@@ -62,7 +62,7 @@ include __DIR__ . "/components/registor.php";
 document.getElementById("testimonialForm").addEventListener("submit", function(e){
 e.preventDefault();
 const form = e.target;
-fetch("http://localhost/madias/wp-json/wp/v2/testimonials?_embed", {
+fetch("/madias/wp-json/wp/v2/testimonials?_embed", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",

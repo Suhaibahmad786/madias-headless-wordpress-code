@@ -1,6 +1,6 @@
 <?php
   $title = $title ?? "Madias";
-  $base  = "/madias/matias/";
+  $base  = "/madias/";
 //   require('/config/config.php');
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
  <section id="site-footer">
     <div class="footer-newsletter flex-con">
         <div class="footer-logo flex-box">
-            <a href="http://localhost/madias/"><img src="http://localhost/madias/wp-content/uploads/2026/02/matias-logo.png" alt=""></a>
+            <a href="/madias/matias/"><img src="/madias/wp-content/uploads/2026/02/matias-logo.png" alt=""></a>
         </div>
         <div class="footer-newsletter-box flex-box">
             <div class="footer-form-wrapper">
