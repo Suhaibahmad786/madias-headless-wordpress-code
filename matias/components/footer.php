@@ -1,32 +1,4 @@
-<?php
-  $title = $title ?? "Madias";
-  $base  = "/madias/";
-//   require('/config/config.php');
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <base href="<?= $base ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title><?= htmlspecialchars($title) ?></title>
-  <style>
-    @media screen and (max-width:767px){
-    .footer-logo{
-        width: 100% !important;
-        text-align: center;
-    }
-    .footer-form-wrapper{
-        width: 100% !important;
-    }
-}
-  </style>
- <link rel="stylesheet" href="style/footer.css">
- <!-- <link rel="stylesheet" href="style/dynamic.css"> -->
-</head>
-<body>
- <section id="site-footer">
+<section id="site-footer">
     <div class="footer-newsletter flex-con">
         <div class="footer-logo flex-box">
             <a href="/madias/matias/"><img src="/madias/wp-content/uploads/2026/02/matias-logo.png" alt=""></a>
@@ -56,6 +28,5 @@
         </div>
     </div>
  </section>
-</body>
 <script src="script/components.js"></script>
 <script src="script/footer.js"></script>

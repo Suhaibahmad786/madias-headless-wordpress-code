@@ -1,4 +1,36 @@
 <?php
+/**
+ * Frontend Router
+ * Routes different URLs to different pages
+ */
+
+$request_uri = $_SERVER['REQUEST_URI'];
+$request_path = parse_url($request_uri, PHP_URL_PATH);
+
+// Remove /madias/matias or /madias from the path
+$request_path = str_replace('/madias/matias/', '/', $request_path);
+$request_path = str_replace('/madias/', '/', $request_path);
+
+// Map paths to files
+$page_map = [
+    '/services/' => __DIR__ . '/services.php',
+    '/about/' => __DIR__ . '/about.php',
+    '/blogs/' => __DIR__ . '/blogs.php',
+    '/contact/' => __DIR__ . '/contact.php',
+    '/testimonials/' => __DIR__ . '/testimonials.php',
+];
+
+// Check if request matches a page
+foreach ($page_map as $path => $file) {
+    if ($request_path === $path || $request_path === $path . 'index.php') {
+        if (file_exists($file)) {
+            require $file;
+            exit;
+        }
+    }
+}
+
+// Default to homepage
   $title = $title ?? "Madias";
   $base  = "/madias/matias/";
 ?>
