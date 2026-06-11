@@ -1,0 +1,249 @@
+#my-header {
+  position: sticky;
+  top: 0;
+}
+.nav-link:hover{
+  color: var(--primary) !important;
+}
+.my-header-wrapper {
+  background-color: transparent;
+}
+.header-wrapper {
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.side-nav {
+  width: 40px;
+  background-color: var(--primary);
+  padding: 3px 0;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+}
+.side-nav:hover {
+  background-color: var(--other);
+  transition: 0.5s ease;
+  border: 2px solid var(--primary);
+}
+.side-nav div {
+  width: 25px;
+  border: 2px solid var(--other);
+  margin: 6px;
+}
+.side-nav:hover div {
+  transform: rotate(20deg);
+  border: 2px solid var(--primary) !important;
+  transition: 0.5s ease;
+}
+.head-login {
+  gap: 20px;
+}
+.head-login a {
+  cursor: pointer;
+  background-color: var(--primary);
+  padding: 15px 35px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--secondry);
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+}
+.head-login a:hover {
+  transition: 0.5s ease;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.nav ul {
+  justify-content: center;
+  gap: 20px;
+}
+.nav ul li {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nav ul li:hover {
+  color: var(--primary);
+}
+.matias-logo {
+  width: 20%;
+}
+.side-nav-wrapper {
+  width: 5%;
+}
+.nav {
+  width: 50%;
+}
+.head-login {
+  width: 25%;
+}
+
+/* Side Bar Menu */
+#sidemenu,
+#movbilemenu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--secondry);
+  transition: left 0.5s ease;
+  z-index: 9999;
+}
+.sidemenu-wrapper button,
+.mobilemenu-wrapper button {
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--headcolor);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#sidemenu.active,
+#movbilemenu.active {
+  left: 0;
+}
+.inner-wrapper {
+  padding: 80px 10px 0 10px;
+  flex-direction: column;
+}
+/* #movbilemenu{
+    display: none;
+} */
+.inner-wrapper p {
+  padding-top: 10px;
+}
+#movbilemenu {
+  display: none;
+}
+#my-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+}
+
+#my-header.active {
+ background-color: black !important;
+}
+@media screen and (max-width: 1024px) {
+  #sidemenu {
+    display: none;
+  }
+  #movbilemenu {
+    display: block;
+  }
+  .head-login a {
+    padding: 10px 25px;
+  }
+  .matias-logo img {
+    width: 162px;
+  }
+  .nav {
+    display: none;
+  }
+  .side-nav-wrapper {
+    width: 5%;
+    margin-right: 10px;
+  }
+  .matias-logo {
+    width: 60%;
+  }
+  .head-login {
+    width: 45%;
+    justify-content: end;
+    padding-right: 15px;
+  }
+  .mobile-menu ul {
+    flex-direction: column;
+    align-items: start;
+  }
+  .mobilemenu-inner-wrapper img {
+    width: 148px;
+  }
+  .mobilemenu-inner-wrapper p {
+    padding-top: 10px;
+  }
+  .mobile-menu {
+    margin-top: 20px;
+  }
+  .mobilemenu-inner-wrapper {
+    padding: 35px 10px 0 10px;
+    align-items: start;
+    flex-direction: column;
+  }
+  .mobile-login {
+    margin-top: 20px;
+  }
+  .mobile-login a {
+    margin: 0 5px 0 0;
+    background-color: var(--primary);
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--secondry);
+    border-radius: 6px;
+    border: 2px solid var(--primary);
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-side-nav {
+    display: block !important;
+  }
+  #movbilemenu {
+    display: block;
+  }
+  #sidemenu {
+    display: none !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  .head-login {
+    display: none;
+  }
+  .header-wrapper {
+    flex-direction: row;
+    padding: 0 10px;
+  }
+  .side-nav-wrapper {
+    width: 30%;
+    padding: 10px;
+  }
+  .matias-logo {
+    width: 70%;
+    padding: 10px;
+    text-align: end;
+  }
+  .mobilemenu-inner-wrapper {
+    padding: 60px 10px 0 10px;
+    align-items: start;
+  }
+  .mobilemenu-inner-wrapper img {
+    width: 148px;
+  }
+  .mobilemenu-inner-wrapper p {
+    padding-top: 10px;
+  }
+  .mobile-menu {
+    margin-top: 20px;
+  }
+  .mobile-menu ul {
+    flex-direction: column;
+    align-items: start;
+  }
+}

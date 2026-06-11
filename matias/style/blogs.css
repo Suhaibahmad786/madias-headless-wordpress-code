@@ -1,0 +1,83 @@
+.blogs-hero-wrapper {
+  height: 70vh;
+}
+.blogs-hero-wrapper h2 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 600;
+  color: white;
+}
+#search-blogs h2{
+text-align: center;
+font-size: 36px;
+line-height: 42px;
+color: white;
+}
+#posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.post-wrapper{
+    padding: 10px 15px;
+}
+.post-wrapper img{
+    border-radius: 12px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.post-info{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.post-info h2{
+    max-width: 75%;
+    font-size: 26px;
+    line-height: 28px;
+    color: white;
+}
+.post-info a{
+    background-color: var(--primary) !important;
+    color: var(--secondry);
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 22px;
+    border: 1px solid var(--primary);
+}
+.post-info a:hover{
+    transition: 0.5s ease;
+    color: white;
+    background-color: var(--secondry) !important;
+    border: 1px solid var(--primary);
+}
+@media screen and (max-width:1024px){
+    #posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+    .blogs-hero-wrapper h2 {
+    font-size: 42px;
+    line-height: 46px;
+}
+}
+@media screen and (max-width:767px){
+    #posts{
+    grid-template-columns: 1fr;
+}
+.blogs-hero-wrapper{
+    height: 30vh;
+}
+.blogs-hero-wrapper h2 {
+    font-size: 28px;
+    line-height: 32px;
+}
+.post-wrapper img{
+    border-radius: 12px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+}
